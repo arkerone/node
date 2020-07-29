@@ -43,7 +43,6 @@ const expectedModules = new Set([
   'NativeModule internal/constants',
   'NativeModule internal/encoding',
   'NativeModule internal/errors',
-  'NativeModule internal/event_target',
   'NativeModule internal/fixed_queue',
   'NativeModule internal/fs/dir',
   'NativeModule internal/fs/utils',
@@ -86,7 +85,7 @@ const expectedModules = new Set([
   'NativeModule path',
   'NativeModule timers',
   'NativeModule url',
-  'NativeModule util',
+
   'NativeModule vm',
 ]);
 
@@ -101,6 +100,7 @@ if (!common.isMainThread) {
     'NativeModule _stream_transform',
     'NativeModule _stream_writable',
     'NativeModule internal/error_serdes',
+    'NativeModule internal/event_target',
     'NativeModule internal/process/worker_thread_only',
     'NativeModule internal/streams/buffer_list',
     'NativeModule internal/streams/destroy',
@@ -111,6 +111,7 @@ if (!common.isMainThread) {
     'NativeModule internal/worker',
     'NativeModule internal/worker/io',
     'NativeModule stream',
+    'NativeModule util',
     'NativeModule worker_threads',
   ].forEach(expectedModules.add.bind(expectedModules));
 }
